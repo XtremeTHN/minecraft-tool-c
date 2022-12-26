@@ -9,3 +9,12 @@ El archivo compila con gcc y tiene la opcion de depurar con el sanitizador de go
 ```
 ./build [-d] [-ds]
 ```
+
+### STATUS
+Estado actual del proyecto (Solo es para que no se me olvide lo que estoy haciendo)
+
+## Librerias
+Solo una libreria esta hecha por terceros y la verdad la mayoria es para hacer ver el archivo main.c mas limpio
+
+### cfg_funcs.h
+
