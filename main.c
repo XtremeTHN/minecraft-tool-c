@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "libs/parsers/inih/ini.h"
+#include "libs/parsers/inih/ini.c"
 #include "libs/cfg_funcs/cfg_funcs.h"
 #include "libs/pkg_move/mv.h"
 #include "libs/progressbar/progress.h"
