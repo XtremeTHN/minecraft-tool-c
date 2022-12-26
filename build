@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ "$1" == "-d" ]; then
+    gcc main.c -o main -g; gdb main
+    if [ $? -eq 0 ]; then
+        exit 0
+    else
+        exit 1
+    fi
+fi
+
+if [ "$1" == "-ds" ]; then
+    gcc main.c -o main -g -fsanitize=address; gdb main
+    if [ $? -eq 0 ]; then
+        exit 0
+    else
+        exit 1
+    fi
+fi
+
+if [ "$1" == "" ]; then
+    gcc main.c -o main
+    if [ $? -eq 0 ]; then
+        exit 0
+    else
+        exit 1
+    fi
+fi

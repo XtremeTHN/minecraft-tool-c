@@ -1,0 +1,3 @@
+[submodule "libs/parsers/inih"]
+	path = libs/parsers/inih
+	url = https://github.com/benhoyt/inih

@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include "libs/argparse.h"
+#include <stdbool.h>
+
+static const char *const usages[] = {
+    "minecraft [options] [[--] args]",
+    "minecraft [options]",
+    NULL,
+};
+
+int main(int argc, char *argv[]){
+    bool inst = false;
+    const char *path = NULL;
+    struct argparse_option arguments[] = {
+        OPT_HELP(),
+        OPT_GROUP("Argumentos basicos Minecraft Tool 0.0.1"),
+        OPT_BOOLEAN('i', "install", &path, "Instalar un paquete, sintaxis 'minecraft -i [shaderpack, resourcepack] [pack]'"),
+        OPT_END(),
+    }:
+    struct argparse argparse;
+    argparse_init(&argparse, arguments, usages, 0);
+    argparse_describe(&argparse, "\nMinecraft tool creado por XtremeTHN, funcionalidades para mas comodidad");
+    argc = argparse_parse(&argparse, argc, argv);
+    if (path != NULL){
+        printf("Instalando...\n");
+    }
+    return 0;
+}
